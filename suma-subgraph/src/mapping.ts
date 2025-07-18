@@ -16,11 +16,12 @@ export function handleSwap(event: SwapEvent): void {
   swap.amount0 = event.params.amount0;
   swap.amount1 = event.params.amount1;
   swap.timestamp = event.block.timestamp;
-  swap.save();
 
+  // Set user field to sender's address
   let senderId = event.params.sender.toHex();
-  let recipientId = event.params.recipient.toHex();
+  swap.user = senderId;
 
+  // User entity logic (optional, if you track user stats)
   let sender = User.load(senderId);
   if (!sender) {
     sender = new User(senderId);
@@ -29,15 +30,5 @@ export function handleSwap(event: SwapEvent): void {
   sender.totalLiquidityTraded = sender.totalLiquidityTraded.plus(event.params.amount0.abs()).plus(event.params.amount1.abs());
   sender.save();
 
-  let recipient = User.load(recipientId);
-  if (!recipient) {
-    recipient = new User(recipientId);
-    recipient.totalLiquidityTraded = BigInt.zero();
-  }
-  recipient.totalLiquidityTraded = recipient.totalLiquidityTraded.plus(event.params.amount0.abs()).plus(event.params.amount1.abs());
-  recipient.save();
-
-  // Optionally, link swap to user
-  swap.user = sender.id; // or recipient.id, or both if you want a many-to-many relation
   swap.save();
 }

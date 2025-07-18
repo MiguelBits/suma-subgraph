@@ -10,7 +10,7 @@ dataSources:
     source:
       address: "0xcab7709ea5c984C2F4DDFB9d301cB2A19C06afEE"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -31,7 +31,7 @@ dataSources:
     source:
       address: "0x080c376e6aB309fF1a861e1c3F91F27b8D4f1443"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -52,7 +52,7 @@ dataSources:
     source:
       address: "0x7d84b7C92ef6711AC247b5D9DF4d59258C04ac85"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -73,7 +73,7 @@ dataSources:
     source:
       address: "0x345df89c8b69ef285a74c9f0f9498f6446a05d40"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -94,7 +94,7 @@ dataSources:
     source:
       address: "0x288661c83c8d18b180a29959b9442268532f6174"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -115,7 +115,7 @@ dataSources:
     source:
       address: "0x8f08613b22e28ff983ef46dcd30dd0bf150900e6"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -136,7 +136,7 @@ dataSources:
     source:
       address: "0xb461f408fe2ebafa0bd093c3a30a7b478e193616"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -157,7 +157,7 @@ dataSources:
     source:
       address: "0x05a2928c5bc91bd0548ecd4ab81bf0aa6c5a8b27"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -178,7 +178,7 @@ dataSources:
     source:
       address: "0xad8c13da0fc59803cf876d35e4da3f26396dd8ce"
       abi: PoolABI
-      startBlock: 1
+      startBlock: 10166219
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
