@@ -238,6 +238,19 @@ export class User extends Entity {
     this.set("totalLiquidityTraded", Value.fromBigInt(value));
   }
 
+  get swapCount(): BigInt {
+    let value = this.get("swapCount");
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
+  }
+
+  set swapCount(value: BigInt) {
+    this.set("swapCount", Value.fromBigInt(value));
+  }
+
   get swaps(): SwapLoader {
     return new SwapLoader("User", this.get("id")!.toString(), "swaps");
   }

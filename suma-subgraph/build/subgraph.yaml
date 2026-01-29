@@ -5,12 +5,12 @@ schema:
   file: schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: SumaBtcPool
-    network: citrea-testnet-tangerine
+    name: Pool1
+    network: citrea
     source:
-      address: "0xcab7709ea5c984C2F4DDFB9d301cB2A19C06afEE"
+      address: "0x172d2ab563afdaace7247a6592ee1be62e791165"
       abi: PoolABI
-      startBlock: 10166219
+      startBlock: 2236500
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -19,19 +19,19 @@ dataSources:
         - Pool
       abis:
         - name: PoolABI
-          file: SumaBtcPool\abis\pool_abi.json
+          file: Pool1\abis\pool_abi.json
       eventHandlers:
         - event: Swap(indexed address,indexed
             address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
+      file: Pool1\Pool1.wasm
   - kind: ethereum/contract
-    name: BtcUsdcPool
-    network: citrea-testnet-tangerine
+    name: Pool2
+    network: citrea
     source:
-      address: "0x080c376e6aB309fF1a861e1c3F91F27b8D4f1443"
+      address: "0x5d4b518984ae9778479ee2ea782b9925bbf17080"
       abi: PoolABI
-      startBlock: 10166219
+      startBlock: 2236500
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -40,19 +40,19 @@ dataSources:
         - Pool
       abis:
         - name: PoolABI
-          file: BtcUsdcPool\abis\pool_abi.json
+          file: Pool2\abis\pool_abi.json
       eventHandlers:
         - event: Swap(indexed address,indexed
             address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
+      file: Pool1\Pool1.wasm
   - kind: ethereum/contract
-    name: NusdBtcPool
-    network: citrea-testnet-tangerine
+    name: Pool3
+    network: citrea
     source:
-      address: "0x7d84b7C92ef6711AC247b5D9DF4d59258C04ac85"
+      address: "0xaea5cf09209631b6a3a69d5798034e2efdbe2cc8"
       abi: PoolABI
-      startBlock: 10166219
+      startBlock: 2236500
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -61,19 +61,19 @@ dataSources:
         - Pool
       abis:
         - name: PoolABI
-          file: NusdBtcPool\abis\pool_abi.json
+          file: Pool3\abis\pool_abi.json
       eventHandlers:
         - event: Swap(indexed address,indexed
             address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
+      file: Pool1\Pool1.wasm
   - kind: ethereum/contract
-    name: SumaUsdcPool
-    network: citrea-testnet-tangerine
+    name: Pool4
+    network: citrea
     source:
-      address: "0x345df89c8b69ef285a74c9f0f9498f6446a05d40"
+      address: "0xb22325fe6e033c6b7cefb7bc69c9650ffdc691f9"
       abi: PoolABI
-      startBlock: 10166219
+      startBlock: 2236500
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -82,19 +82,19 @@ dataSources:
         - Pool
       abis:
         - name: PoolABI
-          file: SumaUsdcPool\abis\pool_abi.json
+          file: Pool4\abis\pool_abi.json
       eventHandlers:
         - event: Swap(indexed address,indexed
             address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
+      file: Pool1\Pool1.wasm
   - kind: ethereum/contract
-    name: S33BtcPool
-    network: citrea-testnet-tangerine
+    name: Pool5
+    network: citrea
     source:
-      address: "0x288661c83c8d18b180a29959b9442268532f6174"
+      address: "0xa82eee40f1c88d773c93771d5b1fac61db311945"
       abi: PoolABI
-      startBlock: 10166219
+      startBlock: 2236500
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -103,93 +103,9 @@ dataSources:
         - Pool
       abis:
         - name: PoolABI
-          file: S33BtcPool\abis\pool_abi.json
+          file: Pool5\abis\pool_abi.json
       eventHandlers:
         - event: Swap(indexed address,indexed
             address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
-  - kind: ethereum/contract
-    name: NusdSumaPool
-    network: citrea-testnet-tangerine
-    source:
-      address: "0x8f08613b22e28ff983ef46dcd30dd0bf150900e6"
-      abi: PoolABI
-      startBlock: 10166219
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Pool
-      abis:
-        - name: PoolABI
-          file: NusdSumaPool\abis\pool_abi.json
-      eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
-          handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
-  - kind: ethereum/contract
-    name: NusdS33
-    network: citrea-testnet-tangerine
-    source:
-      address: "0xb461f408fe2ebafa0bd093c3a30a7b478e193616"
-      abi: PoolABI
-      startBlock: 10166219
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Pool
-      abis:
-        - name: PoolABI
-          file: NusdS33\abis\pool_abi.json
-      eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
-          handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
-  - kind: ethereum/contract
-    name: S33SumaPool
-    network: citrea-testnet-tangerine
-    source:
-      address: "0x05a2928c5bc91bd0548ecd4ab81bf0aa6c5a8b27"
-      abi: PoolABI
-      startBlock: 10166219
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Pool
-      abis:
-        - name: PoolABI
-          file: S33SumaPool\abis\pool_abi.json
-      eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
-          handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
-  - kind: ethereum/contract
-    name: NusdUsdcPool
-    network: citrea-testnet-tangerine
-    source:
-      address: "0xad8c13da0fc59803cf876d35e4da3f26396dd8ce"
-      abi: PoolABI
-      startBlock: 10166219
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Pool
-      abis:
-        - name: PoolABI
-          file: NusdUsdcPool\abis\pool_abi.json
-      eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
-          handler: handleSwap
-      file: SumaBtcPool\SumaBtcPool.wasm
+      file: Pool1\Pool1.wasm

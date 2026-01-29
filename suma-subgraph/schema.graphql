@@ -17,5 +17,6 @@ type Swap @entity {
 type User @entity {
   id: ID!
   totalLiquidityTraded: BigInt!
+  swapCount: BigInt!
   swaps: [Swap!]! @derivedFrom(field: "user")
 }
