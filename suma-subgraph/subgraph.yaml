@@ -129,7 +129,6 @@ dataSources:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24,uint24,uint24)
           handler: handleSwap
       file: ./src/mapping.ts
-
   - kind: ethereum/contract
     name: NusdS33
     network: citrea-testnet-tangerine
