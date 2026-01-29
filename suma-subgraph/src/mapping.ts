@@ -17,8 +17,8 @@ export function handleSwap(event: SwapEvent): void {
   swap.amount1 = event.params.amount1;
   swap.timestamp = event.block.timestamp;
 
-  // Set user field to recipient (actual user receiving the swap)
-  let userId = event.params.recipient.toHex();
+  // Set user field to transaction origin (actual wallet that initiated the tx)
+  let userId = event.transaction.from.toHex();
   swap.user = userId;
 
   // User entity logic (tracks actual user stats)
