@@ -21,8 +21,7 @@ dataSources:
         - name: PoolABI
           file: Pool1\abis\pool_abi.json
       eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
+        - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
       file: Pool1\Pool1.wasm
   - kind: ethereum/contract
@@ -42,8 +41,7 @@ dataSources:
         - name: PoolABI
           file: Pool2\abis\pool_abi.json
       eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
+        - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
       file: Pool1\Pool1.wasm
   - kind: ethereum/contract
@@ -63,8 +61,7 @@ dataSources:
         - name: PoolABI
           file: Pool3\abis\pool_abi.json
       eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
+        - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
       file: Pool1\Pool1.wasm
   - kind: ethereum/contract
@@ -84,8 +81,7 @@ dataSources:
         - name: PoolABI
           file: Pool4\abis\pool_abi.json
       eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
+        - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
       file: Pool1\Pool1.wasm
   - kind: ethereum/contract
@@ -105,7 +101,6 @@ dataSources:
         - name: PoolABI
           file: Pool5\abis\pool_abi.json
       eventHandlers:
-        - event: Swap(indexed address,indexed
-            address,int256,int256,uint160,uint128,int24,uint24,uint24)
+        - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
       file: Pool1\Pool1.wasm

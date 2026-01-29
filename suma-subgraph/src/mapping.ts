@@ -1,4 +1,4 @@
-import { Swap as SwapEvent } from "../generated/SumaBtcPool/PoolABI";
+import { Swap as SwapEvent } from "../generated/Pool1/PoolABI";
 import { Swap as SwapEntity, Pool, User } from "../generated/schema";
 import { BigInt } from "@graphprotocol/graph-ts";
 

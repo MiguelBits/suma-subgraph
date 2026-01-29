@@ -370,14 +370,6 @@ export class Swap__Params {
   get tick(): i32 {
     return this._event.parameters[6].value.toI32();
   }
-
-  get overrideFee(): i32 {
-    return this._event.parameters[7].value.toI32();
-  }
-
-  get pluginFee(): i32 {
-    return this._event.parameters[8].value.toI32();
-  }
 }
 
 export class TickSpacing extends ethereum.Event {
