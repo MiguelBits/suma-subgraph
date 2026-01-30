@@ -17,9 +17,12 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Pool
+        - Token
       abis:
         - name: PoolABI
           file: ./abis/pool_abi.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
@@ -38,9 +41,12 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Pool
+        - Token
       abis:
         - name: PoolABI
           file: ./abis/pool_abi.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
@@ -59,9 +65,12 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Pool
+        - Token
       abis:
         - name: PoolABI
           file: ./abis/pool_abi.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
@@ -80,9 +89,12 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Pool
+        - Token
       abis:
         - name: PoolABI
           file: ./abis/pool_abi.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap
@@ -101,9 +113,12 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Pool
+        - Token
       abis:
         - name: PoolABI
           file: ./abis/pool_abi.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: Swap(indexed address,indexed address,int256,int256,uint160,uint128,int24)
           handler: handleSwap

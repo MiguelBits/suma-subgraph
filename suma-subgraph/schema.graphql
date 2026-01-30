@@ -1,5 +1,14 @@
+type Token @entity {
+  id: ID!
+  symbol: String!
+  name: String!
+  decimals: Int!
+}
+
 type Pool @entity {
   id: ID!
+  token0: Token!
+  token1: Token!
   swaps: [Swap!]! @derivedFrom(field: "pool")
 }
 
@@ -10,13 +19,16 @@ type Swap @entity {
   recipient: Bytes!
   amount0: BigInt!
   amount1: BigInt!
+  amount0Normalized: BigDecimal!
+  amount1Normalized: BigDecimal!
   timestamp: BigInt!
   user: User!
 }
 
 type User @entity {
   id: ID!
-  totalLiquidityTraded: BigInt!
+  "Total liquidity traded normalized by token decimals (sum of absolute values)"
+  totalLiquidityTraded: BigDecimal!
   swapCount: BigInt!
   swaps: [Swap!]! @derivedFrom(field: "user")
 }
